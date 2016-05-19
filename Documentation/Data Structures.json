@@ -68,7 +68,7 @@
         sessions: [
           {
             agenda: [
-              agenda_item: {structure goes here}
+              {agenda_item structure goes here}
             ],
             {
               chairings?: { 
