@@ -1,4 +1,4 @@
-Governing Body: {
+Organization: {
   governance: {
     name: string,
     officers: [
