@@ -2,9 +2,10 @@ The following is pseudo-code of the structure:
 
 Governing Body: {
   metadata: {
-    name,
+    name: string,
     officer positions: [
       {
+        id: number,
         position: string,
         duties: extended string,
         term: string,
@@ -14,6 +15,7 @@ Governing Body: {
   },
   committees: [
       {
+        id: number,
         name: string,
         chair: member,
         mandate: extended string,
@@ -28,7 +30,8 @@ Governing Body: {
       ]
   ],
   convenings: [
-    {
+    convening: {
+      id: number
       committee,
       sessions: [
         {
