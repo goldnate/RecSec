@@ -1,9 +1,9 @@
 The following is pseudo-code of the structure:
 
 Governing Body: {
-  metadata: {
+  governance: {
     name: string,
-    officer positions: [
+    officers: [
       {
         id: number,
         position: string,
@@ -12,6 +12,21 @@ Governing Body: {
         elected by: committee
       }
     ]
+    staff: [
+      {
+        id: number,
+        fields: [
+          {  
+            name:string,
+            value: string
+          }
+        ]
+      }
+    ],
+    constitution: long string,
+    by-laws: long string,
+    parliamentary rules:
+      [a whole structure goes here]
   },
   committees: [
       {
@@ -19,23 +34,45 @@ Governing Body: {
         name: string,
         chair: member,
         mandate: extended string,
-        members: [array]
+        members: [member]
       }
   ],
-  members: [
+  membership: {
+    fields: [
+      {  
+        name:string,
+        type: string
+      }
+    ],
+    members: [
+      {
+        id: number,
+        fields: [
+          {field: value}
+        ],
+        history: [
+          {
+            date: datetime,
+            field: string,
+            old value: string,
+            new value: string,
+            changedby: staff
+          }
+        ]
+      }
+    ]
+  },
+  convenings: [
     {
       id: number,
-      [
-        fields provided by Governing Body? How does this work?
-      ]
-  ],
-  convenings: [
-    convening: {
-      id: number
-      committee,
+      convened_by: committee,
       sessions: [
         {
-          start date:
+          chairings?: { // need to figure out how to handle change of chair mid-session
+            start: datetime,
+            chair: member;
+            proceedings: [a whole structure here]
+          }
         }
       ]
     }
