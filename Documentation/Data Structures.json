@@ -6,7 +6,7 @@
         {
           id: number,
           position: string,
-          duties: extended string,
+          duties: longstring,
           term: string,
           elected by: committee
         }
@@ -16,14 +16,14 @@
           id: number,
           fields: [
             {  
-              name:string,
+              name: string,
               value: string
             }
           ]
         }
       ],
-      constitution: long string,
-      by-laws: long string,
+      constitution: longstring,
+      by-laws: longstring,
       parliamentary rules:
         [a whole structure goes here]
     },
@@ -32,7 +32,7 @@
           id: number,
           name: string,
           chair: member,
-          mandate: extended string,
+          mandate: longstring,
           members: [member]
         }
     ],
@@ -68,7 +68,7 @@
         sessions: [
           {
             agenda: [
-              agenda item {structure goes here}
+              agenda_item: {structure goes here}
             ],
             {
               chairings?: { 
