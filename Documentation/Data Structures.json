@@ -66,10 +66,15 @@ Governing Body: {
       convened_by: committee,
       sessions: [
         {
-          chairings?: { 
-            start: datetime,
-            chair: member;
-            proceedings: [a whole structure here]
+          agenda: [
+            agenda item {structure goes here}
+          ],
+          {
+            chairings?: { 
+              start: datetime,
+              chair: member;
+              proceedings: [a whole structure here]
+            }
           }
         }
       ]
