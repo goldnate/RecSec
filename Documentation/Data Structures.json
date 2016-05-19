@@ -1,83 +1,85 @@
-Organization: {
-  governance: {
-    name: string,
-    officers: [
-      {
-        id: number,
-        position: string,
-        duties: extended string,
-        term: string,
-        elected by: committee
-      }
-    ]
-    staff: [
-      {
-        id: number,
-        fields: [
-          {  
-            name:string,
-            value: string
-          }
-        ]
-      }
-    ],
-    constitution: long string,
-    by-laws: long string,
-    parliamentary rules:
-      [a whole structure goes here]
-  },
-  committees: [
-      {
-        id: number,
-        name: string,
-        chair: member,
-        mandate: extended string,
-        members: [member]
-      }
-  ],
-  membership: {
-    fields: [
-      {  
-        name:string,
-        type: string
-      }
-    ],
-    members: [
-      {
-        id: number,
-        fields: [
-          {field: value}
-        ],
-        history: [
-          {
-            date: datetime,
-            field: string,
-            old value: string,
-            new value: string,
-            changedby: staff
-          }
-        ]
-      }
-    ]
-  },
-  convenings: [
-    {
-      id: number,
-      convened_by: committee,
-      sessions: [
+{ 
+  Organization: {
+    governance: {
+      name: string,
+      officers: [
         {
-          agenda: [
-            agenda item {structure goes here}
-          ],
-          {
-            chairings?: { 
-              start: datetime,
-              chair: member;
-              proceedings: [a whole structure here]
-            }
-          }
+          id: number,
+          position: string,
+          duties: extended string,
+          term: string,
+          elected by: committee
         }
       ]
-    }
-  ]
+      staff: [
+        {
+          id: number,
+          fields: [
+            {  
+              name:string,
+              value: string
+            }
+          ]
+        }
+      ],
+      constitution: long string,
+      by-laws: long string,
+      parliamentary rules:
+        [a whole structure goes here]
+    },
+    committees: [
+        {
+          id: number,
+          name: string,
+          chair: member,
+          mandate: extended string,
+          members: [member]
+        }
+    ],
+    membership: {
+      fields: [
+        {  
+          name:string,
+          type: string
+        }
+      ],
+      members: [
+        {
+          id: number,
+          fields: [
+            {field: value}
+          ],
+          history: [
+            {
+              date: datetime,
+              field: string,
+              old value: string,
+              new value: string,
+              changedby: staff
+            }
+          ]
+        }
+      ]
+    },
+    convenings: [
+      {
+        id: number,
+        convened_by: committee,
+        sessions: [
+          {
+            agenda: [
+              agenda item {structure goes here}
+            ],
+            {
+              chairings?: { 
+                start: datetime,
+                chair: member;
+                proceedings: [a whole structure here]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
 }
