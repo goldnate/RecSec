@@ -1,4 +1,4 @@
-The following is pseudo-code of the structure:
+// The following is pseudo-code of the structure:
 
 Governing Body: {
   governance: {
