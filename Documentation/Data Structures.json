@@ -4,16 +4,16 @@
       name: string,
       officers: [
         {
-          id: number,
+          officer_id: number,
           position: string,
           duties: longstring,
           term: string,
-          elected by: committee
+          elected by: committee_id
         }
       ]
       staff: [
         {
-          id: number,
+          staff_id: number,
           fields: [
             {  
               name: string,
@@ -23,17 +23,20 @@
         }
       ],
       constitution: longstring,
-      by-laws: longstring,
-      parliamentary rules:
-        [a whole structure goes here]
+      bylaws: longstring,
+      parliamentary rules: [
+        
+        --||STRUCTURE GOES HERE||--
+        
+      ]
     },
     committees: [
         {
-          id: number,
+          committee_id: number,
           name: string,
           chair: member,
           mandate: longstring,
-          members: [member]
+          members: [member_id]
         }
     ],
     membership: {
@@ -45,7 +48,7 @@
       ],
       members: [
         {
-          id: number,
+          member_id: number,
           fields: [
             {field: value}
           ],
@@ -55,7 +58,7 @@
               field: string,
               old value: string,
               new value: string,
-              changedby: staff
+              changed_by: staff_id
             }
           ]
         }
@@ -68,12 +71,18 @@
         sessions: [
           {
             agenda: [
-              {agenda_item structure goes here}
+              {
+                agenda_item: {
+                  
+                  --||STRUCTURE GOES HERE||--
+                  
+                }
+              }
             ],
             {
               chairings?: { 
                 start: datetime,
-                chair: member;
+                chair: member_id;
                 proceedings: [a whole structure here]
               }
             }
