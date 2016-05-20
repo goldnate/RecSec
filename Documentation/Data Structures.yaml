@@ -1,0 +1,12 @@
+---
+Organization:
+  governance:
+    organization name: string #value in key-value pairs indicates type or structure
+    officer positions: #represents positions in the abstract--not the member that fills the position
+    - #this will be an array of officers with the terms below
+      officer id: number
+      position: string
+      duties: string
+      term: string
+      electing body: committee #this represents the committee structure, see below.
+      
