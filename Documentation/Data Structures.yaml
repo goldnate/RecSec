@@ -1,12 +1,22 @@
----
+--- # many of the data structures below will be modularized in their own files
 Organization:
   governance:
     organization name: string #value in key-value pairs indicates type or structure
-    officer positions: #represents positions in the abstract--not the member that fills the position
+    officer position: #represents positions in the abstract--not the member that fills the position
     - #this will be an array of officers with the terms below
       officer id: number
       position: string
       duties: string
       term: string
-      electing body: committee #this represents the committee structure, see below.
-      
+      electing body: committee id #this links to the committee structure, see below.
+    staff: 
+    -
+      staffer id: number
+      fields: #these fields will be determined by the organization, not by the structure of the application
+        -  # will a class or prototype of staffer be needed to set the fields as repeated?
+          field name: string
+          value: string
+    constitution: string # represented by URI, rather than directly by text
+    bylaws: string #same as above
+    parliamentary authority: string # also a URI but note that this resource will be a structure of rules and this structure will be machine read for the parliamentary scoreboard/controller
+    
