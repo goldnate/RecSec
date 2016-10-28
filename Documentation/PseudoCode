@@ -1,0 +1,19 @@
+  /* RecSec starting with Pseudo-code */
+
+
+// Identify/Create user (login)
+// Confirm/alter preferences/locations
+// Identify Governing Body and Committee or Sub-committee
+// Identify Session and Meeting
+// Create/Apply Parliamentary Rules
+// Create/Apply Agenda
+// Choose viewpoint of the meeting (recording secretary, chair, participant, etc.)
+// Work through the Agenda -- This is the big one
+	// Display Presentation Page(s)
+	// Show/Control Audio/Video
+	// Embed or control a web page
+	// Run/Record a discussion using Parliamentary Rules
+	// Run an automatic slideshow of images
+	// Pop up alerts on any type of page
+// Finalize the Record
+// Close down the application
